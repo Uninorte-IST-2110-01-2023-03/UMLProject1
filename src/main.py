@@ -1,3 +1,4 @@
+from book import LibroImpreso, LibroDigital, Audiolibro
 from person import Autor
 
 def main() -> None:
