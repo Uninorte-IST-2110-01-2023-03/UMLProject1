@@ -13,6 +13,9 @@ class Libro(ABC):
         self._valor = valor
         self._editorial: "Editorial" = None
 
+    def __repr__(self) -> str:
+        return f'{self.__class__.__name__}({self._titulo!r}, {self._isbn!r})'
+
 
 class LibroImpreso(Libro):
 
