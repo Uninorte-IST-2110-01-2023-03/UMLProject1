@@ -1,3 +1,4 @@
+#from core import Stand
 from typing import List
 
 class Editorial:
@@ -12,3 +13,13 @@ class Editorial:
 
     def __repr__(self) -> str:
         return f'{self.__class__.__name__}({self.__nit!r}, {self.__nombre!r})'
+    
+    def add_stand(self, stand: "Stand") -> bool:
+        if stand not in self.__stands:
+            self.__stands.append(stand)
+            stand.add_editorial(self)
+            return True
+        return False
+    
+    def get_stands(self) -> List["Stand"]:
+        return self.__stands
