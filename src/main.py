@@ -1,4 +1,5 @@
 from book import LibroImpreso, LibroDigital, Audiolibro
+from company import Editorial
 from core import Megaferia
 from person import Autor
 
@@ -32,6 +33,7 @@ def main() -> None:
         duracion = 330
     )
 
+    editorial = Editorial('865-894846613-1', 'Editorial 1', 'Calle 1 # 1 - 1')
     megaferia = Megaferia()
 
     print(libro_1)
