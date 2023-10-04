@@ -1,4 +1,5 @@
 from book import LibroImpreso, LibroDigital, Audiolibro
+from core import Megaferia
 from person import Autor
 
 def main() -> None:
@@ -31,9 +32,17 @@ def main() -> None:
         duracion = 330
     )
 
+    megaferia = Megaferia()
+
     print(libro_1)
     print(libro_2)
     print(libro_3)
+    print(megaferia)
+
+    megaferia.add_stand(50000.0)
+    megaferia.add_stand(100000.0)
+    megaferia.add_stand(75000.0)
+    print(megaferia)
 
 
 if __name__ == '__main__':
