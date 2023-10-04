@@ -1,5 +1,6 @@
 from book import LibroImpreso, LibroDigital, Audiolibro
 from company import Editorial
+from core import Megaferia
 from person import Autor
 
 def main() -> None:
@@ -33,11 +34,17 @@ def main() -> None:
     )
 
     editorial = Editorial('865-894846613-1', 'Editorial 1', 'Calle 1 # 1 - 1')
+    megaferia = Megaferia()
 
     print(libro_1)
     print(libro_2)
     print(libro_3)
-    print(editorial)
+    print(megaferia)
+
+    megaferia.add_stand(50000.0)
+    megaferia.add_stand(100000.0)
+    megaferia.add_stand(75000.0)
+    print(megaferia)
 
 
 if __name__ == '__main__':
